@@ -1,0 +1,31 @@
+{
+  "name": "sequelize_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "make_migrate": "npx sequelize-cli model:generate --name User --attributes name:string,email:string,age:string,address:string,password:string",
+    "migrate": "npx sequelize-cli db:migrate",
+    "seed":"npx sequelize-cli db:seed:all",
+    "seed_undo":"npx sequelize-cli db:seed:undo",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.16",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "sequelize-cli": "^6.4.1"
+  }
+}
